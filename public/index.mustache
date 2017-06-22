@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <h3>My Auth Site</h3>
+    <a href ="/signup">Sign Up!</a>
+    <a href ="/login">Login!</a>
+    </div>
+
+    <div class = "login">
+      {{#user}}
+      <h3>{{userName}} is currently Logged in
+      {{/user}}
+
+      {{#user}}
+      <form action="/logout" method="post">
+       <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Logout">
+       </form>
+      {{/user}}
+
+    </div>
+</body>
+</html>
